@@ -1,0 +1,27 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: center;
+  
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgba(17, 17, 17,);
+
+  backdrop-filter: blur(4vh);
+  height: 44px;
+  line-height: 20px;
+  align-items: center;
+}
+
+
+nav a { 
+  display: block; 
+  padding: 10px 20px; 
+  text-decoration: none; 
+  color: rgb(200, 200, 200);
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  
+} 
