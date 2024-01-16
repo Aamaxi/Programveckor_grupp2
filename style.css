@@ -70,6 +70,12 @@ p {
 
 .p_mini {
   font-size: 14px;
+  color: #bdbdbd;
+}
+
+.p_big {
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .a-medium {
@@ -135,27 +141,28 @@ nav {
 .div-hero_section {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 2.5rem;
   margin-top: 4.5rem;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   margin-bottom: 4.5rem;
+  max-width: 120rem;
 }
 
 .text-div-hero_section {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+  width: fit-content;
 }
 
 .bild-hero_section {
-  width:  45rem;
-  height: 25rem;
-  background-color: #9e9e9e;
+  width: 40rem;
   display: block;
 }
 
-@media screen and (max-width: 40rem) {
+@media screen and (max-width: 47rem) {
   .bild-hero_section {
     display: none;
   }
@@ -184,7 +191,7 @@ nav {
   display: block;
 }
 
-@media screen and (max-width: 40rem) {
+@media screen and (max-width: 47rem) {
   .div-definition_section-img {
     display: none;
   }
@@ -218,6 +225,20 @@ nav {
   padding: 1rem;
 }
 
+.boxes-example_section {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+@media screen and (min-width: 47rem) {
+    .boxes-example_section {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+  }
+}
+
 /**/
 
 /* ARTICLES */
@@ -226,6 +247,7 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .div-articles_section {
@@ -236,6 +258,11 @@ nav {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   margin-bottom: 4.5rem;
+  flex-wrap: wrap;
+}
+
+.h2-articles_section {
+  text-align: center;
 }
 
 .text-articles_section {
@@ -244,6 +271,7 @@ nav {
   flex-direction: column;
   padding: 1.5rem;
   gap: 1rem;
+  max-width: 55rem;
 
 }
 
@@ -257,16 +285,42 @@ nav {
 
 /**/
 
+/* FOOTER */
+
 footer {
   background-color: #000000;
   color: #ffffff;
-  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.div-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-top: 4.5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  justify-content: space-between;
+}
+
+.size_div-footer {
+  width: 120rem;
+}
+
+@media screen and (min-width: 50rem) {
+  .div-footer {
+    flex-direction: row;
+  }
+
+  footer {
+    justify-content: center;
+  }
 }
 
 .footer-logotyp {
   display: flex;
   flex-direction: row;
-  align-items: center;
   margin-bottom: 2rem;
 
 }
@@ -287,11 +341,15 @@ footer {
 .line-footer {
   height: 0.2rem;
   background-color: #b1b1b1;
+  width: 100%;
 }
 
 .bottom-footer {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 4.5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
