@@ -43,12 +43,18 @@ html {
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 62px;
   font-weight: 700;
+  color: #ffffff;
 }
 
 h2 {
   font-size: 40px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 28px;
   font-weight: 700;
 }
 
@@ -58,7 +64,7 @@ h5 {
 }
 
 p {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
 }
 
@@ -73,15 +79,21 @@ p {
   color: #bdbdbd;
 }
 
+.p_mini-article {
+  font-size: 14px;
+  color: #8f8f8f;
+}
+
 .p_big {
   font-size: 20px;
   font-weight: 700;
+  
 }
 
 .a-medium {
   font-size: 16px;
   text-decoration: none;
-  color: black;
+  color: #ffffff
 }
 
 .pil {
@@ -107,35 +119,88 @@ p {
 /**/
 
 /* NAVBAR */
-nav {
+header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  justify-content: center;
   background-color: #b1b1b1;
+  z-index: 1000000;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100vw;
+}
+
+.div-nav {
   display: flex;
   align-items: center;
-  min-height: 4rem;
+  justify-content: center;
 }
 
-.nav_logo {
+.ul-nav {
   display: flex;
-  margin-left: 1.5rem;
+  flex-direction: row;
+  width: 120rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  white-space: nowrap;
 }
 
-.nav-hamburger_menu {
-  display: flex;
-  margin-left: auto;
+.li-nav {
   margin-right: 1.5rem;
-  width: 3rem;
-  height: 3rem;
-  background-color: antiquewhite;
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  
+}
+
+.logo-nav {
+  margin-right: auto;
+  margin-left: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.logo-nav-a {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000000;
+}
+
+.logo {
+  width: 6rem;
+}
+
+.h3-nav {
+  display: block;
+}
+
+@media screen and (max-width: 36rem) {
+  .h3-nav {
+    display: none;
+  }
 }
 
 /**/
 
 /* HERO SECTION */
 .hero_section {
+  padding-top: 10rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  min-height: 65rem;
+  background: linear-gradient(151deg, rgba(2,0,36,1) 0%, rgba(121,9,9,1) 42%, rgba(0,0,0,1) 100%);
 }
 
 .div-hero_section {
@@ -172,8 +237,10 @@ nav {
 /* DEFINITION */
 .definition_section {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
+  min-height: 50rem;
+  
 }
 
 .div-definition_section {
@@ -184,6 +251,14 @@ nav {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   margin-bottom: 4.5rem;
+  max-width: 120rem;
+  align-items: center;
+}
+
+.text-definition_section {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 }
 
 .div-definition_section-img {
@@ -204,6 +279,7 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  min-height: 50rem;
 }
 
 .div-example_section {
@@ -215,6 +291,7 @@ nav {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   margin-bottom: 4.5rem;
+  max-width: 120rem;
 }
 
 .text-exampleSection {
@@ -248,6 +325,7 @@ nav {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
+  min-height: 50rem;
 }
 
 .div-articles_section {
@@ -272,16 +350,25 @@ nav {
   padding: 1.5rem;
   gap: 1rem;
   max-width: 55rem;
-
 }
 
-.bild-articles_section {
-  background: url(images/censur\ ryssland.jpg);
+.ryssland {
+  background: url(images/protester2.jpg);
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 20rem;
+  height: 30rem;
 }
+
+.kina {
+  background: url(images/protest_kina.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 30rem;
+}
+
+
 
 /**/
 
@@ -352,4 +439,65 @@ footer {
   margin-bottom: 4.5rem;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+}
+
+/* ARTICLE */
+
+article {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.div_article {
+  margin-top: 11rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-bottom: 4.5rem;
+}
+
+.img-article {
+  max-width: 100%;
+  width: 80rem;
+}
+
+.div-img-article {
+  width: 5rem;
+  height: 5rem;
+  background-image: url('images/headshot.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 5rem;
+}
+
+.links-article {
+  display: flex;
+  gap: 2rem;
+}
+
+.text-article {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.div-article {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+  max-width: 70rem;
+}
+
+.brodtext-article {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 70rem;
+}
+
+@media screen and (min-width: 50rem) {
+  
 }
